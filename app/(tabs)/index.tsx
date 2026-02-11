@@ -11,9 +11,8 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import "./globals.css";
 
-export default function Index() {
+const Index = () => {
   return (
     <SafeAreaView className="flex-1 bg-white">
       <FlatList
@@ -63,7 +62,7 @@ export default function Index() {
           );
         }}
         contentContainerClassName="pb-28 px-5"
-        ListHeaderComponent={() => (
+        ListHeaderComponent={
           <View className="flex-between flex-row w-full my-5 px-5">
             <View className="flex-start">
               <Text className="small-bold text-primary">Deliver to:</Text>
@@ -79,8 +78,10 @@ export default function Index() {
 
             <CartButton />
           </View>
-        )}
+        }
       />
     </SafeAreaView>
   );
-}
+};
+
+export default Index;
