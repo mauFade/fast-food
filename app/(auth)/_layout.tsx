@@ -1,3 +1,5 @@
+import CustomButton from "@/components/custom-button";
+import CustomInput from "@/components/custom-input";
 import { images } from "@/constants";
 import { Slot } from "expo-router";
 import {
@@ -34,6 +36,9 @@ export default function _Layout() {
           />
         </View>
       </ScrollView>
+
+      <CustomInput label="E-mail" placeholder="Enter your e-mail" />
+      <CustomButton />
       <Slot />
     </KeyboardAvoidingView>
   );
